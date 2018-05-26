@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -36,6 +37,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnSafariViewTouched(_ sender: Any) {
+        let safariVC = SFSafariViewController(url: URL(string: "https://dpoint.jp/ctrw/web/index.html")!)
+        self.navigationController?.pushViewController(safariVC, animated: true)
+    }
+    @IBAction func btnViewCookiesTouched(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "CookieViewController", bundle: nil)
+        let next = storyboard.instantiateViewController(withIdentifier: "CookieViewController")
+        self.navigationController?.pushViewController(next, animated: true)
     }
 }
 

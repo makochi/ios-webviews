@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cookie View Controller-->
+        <scene sceneID="aGt-Ct-PSa">
+            <objects>
+                <viewController storyboardIdentifier="CookieViewController" id="dv1-ce-aWL" customClass="CookieViewController" customModule="ThirdPartyCookieTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xsz-aQ-sHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z04-mo-Lmd">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z04-mo-Lmd" firstAttribute="width" secondItem="lV4-Ja-qaw" secondAttribute="width" id="BIf-lN-W0P"/>
+                            <constraint firstItem="Z04-mo-Lmd" firstAttribute="centerX" secondItem="lV4-Ja-qaw" secondAttribute="centerX" id="ka3-rf-6UN"/>
+                            <constraint firstItem="Z04-mo-Lmd" firstAttribute="height" secondItem="lV4-Ja-qaw" secondAttribute="height" id="onn-J1-iA7"/>
+                            <constraint firstItem="Z04-mo-Lmd" firstAttribute="centerY" secondItem="lV4-Ja-qaw" secondAttribute="centerY" id="sb5-WL-5E8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lV4-Ja-qaw"/>
+                    </view>
+                    <connections>
+                        <outlet property="txvCookies" destination="Z04-mo-Lmd" id="2v7-Qe-sq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lA-z0-Q7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440.80000000000001" y="245.12743628185908"/>
+        </scene>
+    </scenes>
+</document>

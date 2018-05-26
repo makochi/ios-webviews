@@ -13,7 +13,7 @@
         <!--Third Party Cookie Test-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ThirdPartyCookieTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CookieViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ThirdPartyCookieTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +56,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2A-Cx-xEN">
+                                <rect key="frame" x="102" y="384.5" width="171" height="30"/>
+                                <state key="normal" title="View Cookies"/>
+                                <connections>
+                                    <action selector="btnViewCookiesTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92G-BB-8hN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,12 +73,16 @@
                             <constraint firstItem="hXa-ek-4PI" firstAttribute="baseline" secondItem="WHN-Xi-BeH" secondAttribute="baseline" constant="9" id="P76-Le-XBd"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="height" secondItem="MsA-8Y-9vv" secondAttribute="height" id="bXR-jx-2vW"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="centerX" secondItem="MsA-8Y-9vv" secondAttribute="centerX" id="ccm-0J-Mut"/>
+                            <constraint firstItem="e2A-Cx-xEN" firstAttribute="top" secondItem="hXa-ek-4PI" secondAttribute="bottom" constant="16" id="deZ-rO-uWm"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="top" secondItem="MsA-8Y-9vv" secondAttribute="bottom" constant="16" id="fER-Se-7TE"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="width" secondItem="MsA-8Y-9vv" secondAttribute="width" id="fgK-QV-zL4"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="height" secondItem="p9H-Xn-aOL" secondAttribute="height" id="ipm-1G-ufp"/>
                             <constraint firstItem="MsA-8Y-9vv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="l2f-VD-PrN"/>
                             <constraint firstItem="WHN-Xi-BeH" firstAttribute="top" secondItem="GRP-r4-rq6" secondAttribute="bottom" constant="25" id="mhg-2O-z8l"/>
+                            <constraint firstItem="e2A-Cx-xEN" firstAttribute="width" secondItem="GRP-r4-rq6" secondAttribute="width" id="pFA-Jj-PqP"/>
+                            <constraint firstItem="e2A-Cx-xEN" firstAttribute="height" secondItem="GRP-r4-rq6" secondAttribute="height" id="vDo-Pp-84d"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wVI-8p-2T0"/>
+                            <constraint firstItem="e2A-Cx-xEN" firstAttribute="leading" secondItem="hXa-ek-4PI" secondAttribute="leading" id="whe-pg-BQ3"/>
                             <constraint firstItem="MsA-8Y-9vv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zS2-1k-lAp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
