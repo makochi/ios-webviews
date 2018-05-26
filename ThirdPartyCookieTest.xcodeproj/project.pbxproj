@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC8027120B96E5E0077896B /* WKWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC8026D20B96E5E0077896B /* WKWebViewController.storyboard */; };
+		0FC8027220B96E5E0077896B /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8026E20B96E5E0077896B /* WKWebViewController.swift */; };
+		0FC8027320B96E5E0077896B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8026F20B96E5E0077896B /* WebViewController.swift */; };
+		0FC8027420B96E5E0077896B /* WebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC8027020B96E5E0077896B /* WebViewController.storyboard */; };
 		6FE6B1F320B7C5F00059B041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE6B1F220B7C5F00059B041 /* AppDelegate.swift */; };
 		6FE6B1F520B7C5F00059B041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE6B1F420B7C5F00059B041 /* ViewController.swift */; };
 		6FE6B1F820B7C5F00059B041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FE6B1F620B7C5F00059B041 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC8026D20B96E5E0077896B /* WKWebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WKWebViewController.storyboard; sourceTree = "<group>"; };
+		0FC8026E20B96E5E0077896B /* WKWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		0FC8026F20B96E5E0077896B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		0FC8027020B96E5E0077896B /* WebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebViewController.storyboard; sourceTree = "<group>"; };
 		6FE6B1EF20B7C5F00059B041 /* ThirdPartyCookieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdPartyCookieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE6B1F220B7C5F00059B041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE6B1F420B7C5F00059B041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 				6FE6B1F220B7C5F00059B041 /* AppDelegate.swift */,
 				6FE6B1F420B7C5F00059B041 /* ViewController.swift */,
 				6FE6B1F620B7C5F00059B041 /* Main.storyboard */,
+				0FC8027020B96E5E0077896B /* WebViewController.storyboard */,
+				0FC8026F20B96E5E0077896B /* WebViewController.swift */,
+				0FC8026D20B96E5E0077896B /* WKWebViewController.storyboard */,
+				0FC8026E20B96E5E0077896B /* WKWebViewController.swift */,
 				6FE6B1F920B7C5F00059B041 /* Assets.xcassets */,
 				6FE6B1FB20B7C5F00059B041 /* LaunchScreen.storyboard */,
 				6FE6B1FE20B7C5F00059B041 /* Info.plist */,
@@ -123,9 +135,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC8027120B96E5E0077896B /* WKWebViewController.storyboard in Resources */,
 				6FE6B1FD20B7C5F00059B041 /* LaunchScreen.storyboard in Resources */,
 				6FE6B1FA20B7C5F00059B041 /* Assets.xcassets in Resources */,
 				6FE6B1F820B7C5F00059B041 /* Main.storyboard in Resources */,
+				0FC8027420B96E5E0077896B /* WebViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC8027220B96E5E0077896B /* WKWebViewController.swift in Sources */,
 				6FE6B1F520B7C5F00059B041 /* ViewController.swift in Sources */,
 				6FE6B1F320B7C5F00059B041 /* AppDelegate.swift in Sources */,
+				0FC8027320B96E5E0077896B /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +208,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: p4p.makochi@gmail.com (5HU65947WH)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -249,7 +265,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: p4p.makochi@gmail.com (5HU65947WH)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -274,14 +290,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8RNET9CJJY;
+				DEVELOPMENT_TEAM = 7D4AEW2A86;
 				INFOPLIST_FILE = ThirdPartyCookieTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makochi.ThirdPartyCookieTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makochi.ThirdPartyCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,14 +307,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8RNET9CJJY;
+				DEVELOPMENT_TEAM = 7D4AEW2A86;
 				INFOPLIST_FILE = ThirdPartyCookieTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.makochi.ThirdPartyCookieTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makochi.ThirdPartyCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
