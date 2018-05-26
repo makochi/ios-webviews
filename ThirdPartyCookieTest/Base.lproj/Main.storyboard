@@ -25,34 +25,65 @@
                                     <constraint firstAttribute="height" constant="30" id="LLp-jt-1GD"/>
                                 </constraints>
                                 <state key="normal" title="WebView"/>
+                                <connections>
+                                    <action selector="btnWebViewTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBq-Kg-0Ta"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9H-Xn-aOL">
                                 <rect key="frame" x="101.5" y="245" width="171" height="30"/>
                                 <state key="normal" title="WKWebView"/>
+                                <connections>
+                                    <action selector="btnWKWebViewTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNJ-Gy-y0r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRP-r4-rq6">
                                 <rect key="frame" x="102" y="291" width="171" height="30"/>
                                 <state key="normal" title="SafariViewController"/>
+                                <connections>
+                                    <action selector="btnSafariViewTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DU4-y8-x9w"/>
+                                </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-ek-4PI">
+                                <rect key="frame" x="102" y="337.5" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="36f-Mk-428"/>
+                                    <constraint firstAttribute="width" constant="49" id="hHM-e3-S4F"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Accept Third Party Cookie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-Xi-BeH">
+                                <rect key="frame" x="156" y="346" width="169.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="width" secondItem="p9H-Xn-aOL" secondAttribute="width" id="1FH-Oz-DeI"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="top" secondItem="p9H-Xn-aOL" secondAttribute="bottom" constant="16" id="2H1-1p-xJn"/>
+                            <constraint firstItem="WHN-Xi-BeH" firstAttribute="leading" secondItem="hXa-ek-4PI" secondAttribute="trailing" constant="8" id="70s-Xf-2cD"/>
+                            <constraint firstItem="hXa-ek-4PI" firstAttribute="leading" secondItem="GRP-r4-rq6" secondAttribute="leading" id="IIS-wC-WfM"/>
+                            <constraint firstItem="hXa-ek-4PI" firstAttribute="baseline" secondItem="WHN-Xi-BeH" secondAttribute="baseline" constant="9" id="P76-Le-XBd"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="height" secondItem="MsA-8Y-9vv" secondAttribute="height" id="bXR-jx-2vW"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="centerX" secondItem="MsA-8Y-9vv" secondAttribute="centerX" id="ccm-0J-Mut"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="top" secondItem="MsA-8Y-9vv" secondAttribute="bottom" constant="16" id="fER-Se-7TE"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="width" secondItem="MsA-8Y-9vv" secondAttribute="width" id="fgK-QV-zL4"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="height" secondItem="p9H-Xn-aOL" secondAttribute="height" id="ipm-1G-ufp"/>
                             <constraint firstItem="MsA-8Y-9vv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="l2f-VD-PrN"/>
+                            <constraint firstItem="WHN-Xi-BeH" firstAttribute="top" secondItem="GRP-r4-rq6" secondAttribute="bottom" constant="25" id="mhg-2O-z8l"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wVI-8p-2T0"/>
                             <constraint firstItem="MsA-8Y-9vv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zS2-1k-lAp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Third Party Cookie Test" leftItemsSupplementBackButton="YES" id="9n1-K9-2Li">
-                        <barButtonItem key="backBarButtonItem" title=" " id="iQA-7R-Q3K"/>
+                    <navigationItem key="navigationItem" title="Third Party Cookie Test" id="9n1-K9-2Li">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iQA-7R-Q3K"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnSafariView" destination="GRP-r4-rq6" id="kO0-Jf-z6E"/>
+                        <outlet property="btnWKWebView" destination="p9H-Xn-aOL" id="qfw-0I-cNG"/>
+                        <outlet property="btnWebView" destination="MsA-8Y-9vv" id="r4I-lB-alr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

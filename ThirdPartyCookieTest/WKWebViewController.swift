@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
-class WKWebViewController: UIViewController {
+class WKWebViewController: UIViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let req = URLRequest(url: URL(string: "https://dpoint.jp/ctrw/web/index.html")!)
+        webView.load(req)
     }
 
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
