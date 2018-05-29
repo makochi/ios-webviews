@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zAk-Uj-6Ny">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Web View Controller-->
+        <!--WKWebView-->
         <scene sceneID="uCH-yy-gcT">
             <objects>
-                <viewController storyboardIdentifier="WKWebViewController" id="Cga-qr-216" customClass="WKWebViewController" customModule="ThirdPartyCookieTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Cga-qr-216" customClass="WKWebViewController" customModule="ThirdPartyCookieTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gk4-Sr-vnb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmw-8e-JX9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -36,13 +36,38 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="klb-mZ-ngp"/>
                     </view>
+                    <navigationItem key="navigationItem" title="WKWebView" id="lAw-7s-vLj">
+                        <barButtonItem key="leftBarButtonItem" title="完了" style="done" id="bHJ-vO-qtr">
+                            <connections>
+                                <action selector="btnCloseTouched:" destination="Cga-qr-216" id="4RC-Z2-7TL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="kmw-8e-JX9" id="Dbs-c0-Pbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjI-MG-fgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-121"/>
+            <point key="canvasLocation" x="1688.8" y="-121.88905547226388"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iPs-sF-lWX">
+            <objects>
+                <navigationController storyboardIdentifier="WKWebViewController" automaticallyAdjustsScrollViewInsets="NO" id="zAk-Uj-6Ny" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eMn-TC-AEA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cga-qr-216" kind="relationship" relationship="rootViewController" id="XGa-QB-yXY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81J-i8-d4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-121.88905547226388"/>
         </scene>
     </scenes>
 </document>

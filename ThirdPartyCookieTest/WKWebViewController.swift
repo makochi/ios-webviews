@@ -28,6 +28,10 @@ class WKWebViewController: UIViewController, WKNavigationDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
+    @IBAction func btnCloseTouched(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

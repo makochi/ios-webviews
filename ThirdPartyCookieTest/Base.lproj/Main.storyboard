@@ -43,12 +43,15 @@
                                     <action selector="btnSafariViewTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DU4-y8-x9w"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-ek-4PI">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-ek-4PI">
                                 <rect key="frame" x="102" y="337.5" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="36f-Mk-428"/>
                                     <constraint firstAttribute="width" constant="49" id="hHM-e3-S4F"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="acceptCookieChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2SJ-pz-Igh"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Accept Third Party Cookie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-Xi-BeH">
                                 <rect key="frame" x="156" y="346" width="169.5" height="17"/>
@@ -63,6 +66,20 @@
                                     <action selector="btnViewCookiesTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92G-BB-8hN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siM-hf-ot8">
+                                <rect key="frame" x="102" y="431" width="171" height="30"/>
+                                <state key="normal" title="Remove Cookies"/>
+                                <connections>
+                                    <action selector="btnRemoveCookiesTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pbk-ld-KML"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA0-Fs-DOm">
+                                <rect key="frame" x="102" y="477" width="171" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btnLoginTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SMG-90-8IE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,15 +88,23 @@
                             <constraint firstItem="WHN-Xi-BeH" firstAttribute="leading" secondItem="hXa-ek-4PI" secondAttribute="trailing" constant="8" id="70s-Xf-2cD"/>
                             <constraint firstItem="hXa-ek-4PI" firstAttribute="leading" secondItem="GRP-r4-rq6" secondAttribute="leading" id="IIS-wC-WfM"/>
                             <constraint firstItem="hXa-ek-4PI" firstAttribute="baseline" secondItem="WHN-Xi-BeH" secondAttribute="baseline" constant="9" id="P76-Le-XBd"/>
+                            <constraint firstItem="iA0-Fs-DOm" firstAttribute="width" secondItem="siM-hf-ot8" secondAttribute="width" id="UM2-2X-3oM"/>
+                            <constraint firstItem="siM-hf-ot8" firstAttribute="leading" secondItem="e2A-Cx-xEN" secondAttribute="leading" id="Yrz-cA-Qsa"/>
+                            <constraint firstItem="siM-hf-ot8" firstAttribute="top" secondItem="e2A-Cx-xEN" secondAttribute="bottom" constant="16" id="axe-gl-oij"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="height" secondItem="MsA-8Y-9vv" secondAttribute="height" id="bXR-jx-2vW"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="centerX" secondItem="MsA-8Y-9vv" secondAttribute="centerX" id="ccm-0J-Mut"/>
                             <constraint firstItem="e2A-Cx-xEN" firstAttribute="top" secondItem="hXa-ek-4PI" secondAttribute="bottom" constant="16" id="deZ-rO-uWm"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="top" secondItem="MsA-8Y-9vv" secondAttribute="bottom" constant="16" id="fER-Se-7TE"/>
                             <constraint firstItem="p9H-Xn-aOL" firstAttribute="width" secondItem="MsA-8Y-9vv" secondAttribute="width" id="fgK-QV-zL4"/>
+                            <constraint firstItem="siM-hf-ot8" firstAttribute="height" secondItem="e2A-Cx-xEN" secondAttribute="height" id="gE7-cG-xqZ"/>
+                            <constraint firstItem="iA0-Fs-DOm" firstAttribute="top" secondItem="siM-hf-ot8" secondAttribute="bottom" constant="16" id="hTZ-rb-GRG"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="height" secondItem="p9H-Xn-aOL" secondAttribute="height" id="ipm-1G-ufp"/>
                             <constraint firstItem="MsA-8Y-9vv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="l2f-VD-PrN"/>
+                            <constraint firstItem="iA0-Fs-DOm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mfq-Qb-ETU"/>
                             <constraint firstItem="WHN-Xi-BeH" firstAttribute="top" secondItem="GRP-r4-rq6" secondAttribute="bottom" constant="25" id="mhg-2O-z8l"/>
+                            <constraint firstItem="iA0-Fs-DOm" firstAttribute="height" secondItem="siM-hf-ot8" secondAttribute="height" id="p1F-I7-b0x"/>
                             <constraint firstItem="e2A-Cx-xEN" firstAttribute="width" secondItem="GRP-r4-rq6" secondAttribute="width" id="pFA-Jj-PqP"/>
+                            <constraint firstItem="siM-hf-ot8" firstAttribute="width" secondItem="e2A-Cx-xEN" secondAttribute="width" id="qv2-bb-3kq"/>
                             <constraint firstItem="e2A-Cx-xEN" firstAttribute="height" secondItem="GRP-r4-rq6" secondAttribute="height" id="vDo-Pp-84d"/>
                             <constraint firstItem="GRP-r4-rq6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wVI-8p-2T0"/>
                             <constraint firstItem="e2A-Cx-xEN" firstAttribute="leading" secondItem="hXa-ek-4PI" secondAttribute="leading" id="whe-pg-BQ3"/>
@@ -94,6 +119,7 @@
                         <outlet property="btnSafariView" destination="GRP-r4-rq6" id="kO0-Jf-z6E"/>
                         <outlet property="btnWKWebView" destination="p9H-Xn-aOL" id="qfw-0I-cNG"/>
                         <outlet property="btnWebView" destination="MsA-8Y-9vv" id="r4I-lB-alr"/>
+                        <outlet property="swcAcceptCookie" destination="hXa-ek-4PI" id="kLH-oY-WVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

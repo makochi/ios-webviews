@@ -28,6 +28,10 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
+    @IBAction func btnCcloseTouched(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
