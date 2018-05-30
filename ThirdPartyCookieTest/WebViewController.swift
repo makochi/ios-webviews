@@ -20,6 +20,21 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         webView.loadRequest(req)
     }
     
+    func showCookiePolicyAlert() {
+        let msg: String?
+        switch HTTPCookieStorage.shared.cookieAcceptPolicy {
+        case .onlyFromMainDocumentDomain:
+            msg = "onlyFromMainDocumentDomain"
+        case .always:
+            msg = "always"
+        default:
+            msg = "never"
+        }
+        let alert = UIAlertController(title: "Cookie設定", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     func webViewDidStartLoad(_ webView: UIWebView) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }

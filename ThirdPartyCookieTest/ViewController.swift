@@ -21,7 +21,26 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showCookiePolicyAlert()
+    }
+    
+    func showCookiePolicyAlert() {
+        let msg: String?
+        switch HTTPCookieStorage.shared.cookieAcceptPolicy {
+        case .onlyFromMainDocumentDomain:
+            msg = "onlyFromMainDocumentDomain"
+        case .always:
+            msg = "always"
+        default:
+            msg = "never"
+        }
+        let alert = UIAlertController(title: "Cookie設定", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,7 +57,6 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBAction func btnWebViewTouched(_ sender: Any) {
         let storyboard = UIStoryboard(name: "WebViewController", bundle: nil)
         let next = storyboard.instantiateViewController(withIdentifier: "WebViewController")
-//        self.navigationController?.pushViewController(next, animated: true)
         self.navigationController?.present(next, animated: true, completion: nil)
     }
     
@@ -74,7 +92,6 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         })
         authSession?.start()
     }
-    
     
 }
 
